@@ -1,0 +1,143 @@
+#mainNav {
+	background-color: rgba(0, 0, 0, 0.2);
+	-webkit-transition: all .35s;
+	-moz-transition: all .35s;
+	transition: all .35s;
+	font-family: 'Didact Gothic', sans-serif;
+	font-weight: 200;
+	letter-spacing: 1px;
+	align-content: center; }
+#mainNav form {
+	margin: 5px 0 5px 0; }
+#mainNav p{
+	font-size: 12px;
+    text-align: left;
+    margin: 10px 0 0 0;
+    color:rgba(255, 255, 255, 0.65); }
+#mainNav .navbar-nav > li > a {
+	color: #ffffff;
+	font-size: 16px;
+	font-family: 'Didact Gothic', sans-serif;
+	margin: 5px 0 5px 0; }
+#mainNav .navbar-nav > li > a.active {
+	color: #ffffff; }
+#mainNav .navbar-nav > li > a.active:hover {
+	font-style: bold }
+@media (min-width: 992px) {
+	#mainNav .navbar-brand:hover, #mainNav .navbar-brand:focus {
+		font-style: bold; }
+	#mainNav .navbar-nav > li > a,
+	#mainNav .navbar-nav > li > a:focus {
+		font-style: bold }
+	#mainNav .navbar-nav > li > a:hover,
+	#mainNav .navbar-nav > li > a:focus:hover {
+        font-style: bold; } }
+
+header.masthead {
+    position: relative;
+    width: 150%;
+    padding-top: 450px;
+    padding-bottom: 450px;
+    color: white;
+    background-image: url("../img/main1.jpg"); }
+
+#conceito {
+    background-color: rgb(168, 168, 168);
+    color: rgb(0, 0, 0);
+    width: 100%;
+    padding-top: 150px;
+    padding-bottom: 175px;
+    position: relative; }
+#conceito h1 {
+    text-align: center;
+    padding-bottom: 30px; }
+#conceito p {
+    text-align: left;
+    font-size: 16px;
+    font-family: 'Didact Gothic', sans-serif; }
+#conceito #textinho {
+    padding-bottom: 50px; }
+#conceito img {   
+    border-radius: 100%;
+    height: 75%;
+    width: 100%;; }
+#conceito h6 {
+    text-align: center;
+    font-style: italic;
+    font-family: 'Didact Gothic', sans-serif;
+    padding-top: 30px;
+    color: rgb(59, 59, 59); }
+
+#contacto {
+    background: rgb(23, 50, 90); 
+    font-size: 48px;
+    color: white;
+    width: 100%;
+    padding-top: 150px;
+    padding-bottom: 200px;
+    position: relative; }
+#contacto h1 {
+    padding-bottom: 50px;
+    font-size: 50px;
+    font-family: 'Didact Gothic', sans-serif; }
+#contacto a h6 {
+    color:white;
+    padding-bottom: 50px; }
+#contacto #demail {
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width:75%;
+    border-radius: 5px;
+    background-color: rgb(104, 135, 177); }
+#contacto label {
+    text-align: left;
+    color: black;
+    font-size: 16px; }
+#contacto input[type=email] {
+    padding: 10px;
+    color: rgb(59, 59, 59);
+    font-family: 'Didact Gothic', sans-serif;
+    width:100%;
+    height: 40px;
+    font-size: 16px;
+    border: 2px rgb(23, 50, 90);
+    border-radius: 4px; }
+#contacto input[type=text] {
+    padding: 10px;
+    color: rgb(59, 59, 59);
+    font-family: 'Didact Gothic', sans-serif;
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    border: 2px rgb(23, 50, 90);
+    border-radius: 4px; }
+#contacto textarea {
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Didact Gothic', sans-serif;
+    color: rgb(59, 59, 59);
+    width:100%;
+    height: 100px;
+    box-sizing: border-box;
+    border: 2px rgb(23, 50, 90);
+    border-radius: 4px;  }
+#contacto input[type=submit] {
+    background-color: white;
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 16px;
+    height: 30px;
+    width: 10%;
+    border: 2px rgb(23, 50, 90);
+    border-radius: 4px; }
+#contacto #map {
+    height: 500px;
+    width: 100%; }
+#contacto #social img {
+    height: 100px;
+    width: 100px;
+    margin: 40px; }
+
+
+
+

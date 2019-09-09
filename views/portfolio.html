@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>WebCV Edição Portfólio</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../style/portfolio.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script>
+    $(document).ready(function() {
+            $('#main1').show()
+            $('#main2').hide()
+            $('#main3').hide()
+            $('#gdPtShort').click(function(){
+                $('#main1').hide()
+                $('#main2').show()
+                $('#main3').hide()
+            });
+            $('#vt').click(function(){
+                $('#main1').show()
+                $('#main2').hide()
+                $('#main3').hide()
+            });
+            $('#guardarFullPers').click(function(){
+                $('#main1').hide()
+                $('#main2').hide()
+                $('#main3').show()
+            });
+            $('#guardarFullLiv').click(function(){
+                $('#main1').hide()
+                $('#main2').hide()
+                $('#main3').show()
+            });
+            $('#vt1').click(function(){
+                $('#main1').hide()
+                $('#main2').show()
+                $('#main3').hide()
+            });  
+         $('#cvlivre').hide()
+         $('#cvpersonalizado').hide()
+        
+        $('input[type=radio][name=tipo]').change(function () {
+            if (this.value == 'Personalizado') {
+                console.log("lol")
+                $('#cvpersonalizado').show()
+                 $('#cvlivre').hide()
+                
+            }
+            else if (this.value == 'Livre') {
+                 console.log("lolitos")
+                 $('#cvlivre').show()
+                 $('#cvpersonalizado').hide()
+            }
+            
+        });
+         $('#num_cursos_button').click(function(){
+             $("#cabeça").remove()
+             $("#num_cursos thead").last().append("<tr id=cabeça><th>Nome da instituição de ensino</th><th>Nome do curso*</th><th>Ano de Inicio</th><th>Ano de Fim</th><th>Nota Final</th></tr>");
+            var numero = $('#n_lmd').val();
+            for(var i =0; i<numero;i++)
+            {
+                 $("#num_cursos tbody").last().append("<tr><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td></tr>")
+            }
+             
+         });
+         
+          $('#num_empregos_button').click(function(){
+              console.log("xD")
+             $("#cabeça1").remove()
+             $("#num_empregos thead").last().append("<tr id=cabeça1><th>Nome da Empresa</th><th>Número de anos</th><th>Profissão</th></tr>");
+             var numero1 = $('#n_empregos').val();
+             for(var i =0; i<numero1;i++)
+             {
+                 $("#num_empregos tbody").last().append("<tr><td><input></td><td><input></td><td><input></td></tr>")
+             }
+            });
+           $('#ta').click(function(){
+               $("#cabeça2").remove()
+               $("#t_trabalhos_academicos thead").last().append("<tr id=cabeça2><th>Nome do trabalho</th><th>Descrição</th></tr>")
+               var numero =$("#n_trabalhos_academica").val()
+              for(var i =0; i<numero;i++)
+                {
+                 $("#t_trabalhos_academicos tbody").last().append(" <tr><td><input></td><td><textarea type=text class=form-control rows=6 cols=50></textarea></td></tr>")
+                }
+            });
+            $('#tp').click(function(){
+               $("#cabeça3").remove()
+               $("#t_trabalhos_profissional thead").last().append("<tr id=cabeça3><th>Nome do trabalho</th><th>Descrição</th></tr>")
+               var numero =$("#n_trabalhos_profissional1").val()
+              for(var i =0; i<numero;i++)
+                {
+                 $("#t_trabalhos_profissional tbody").last().append(" <tr><td><input></td><td><textarea type=text class=form-control rows=6 cols=50></textarea></td></tr>")
+                }
+            });
+                                                        
+         
+    });
+    </script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+  <body>
+    <div id="wrapper">
+        <header id="header">
+            <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+                <div class="container">
+                    <form class="form-inline">
+                        <a href="/mainIndividuo">
+                            <img src="../img/WebCV_Logo_2.png" class="navbar-brand js-scroll-trigger">
+                        </a>
+                        <p id="texto-inicial" name="bem-vindo"></p>
+                    </form>
+                    <div id="google_translate_element"></div><script type="text/javascript">
+            function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'pt', includedLanguages: 'en,pt', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+          }
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link js-scroll-trigger" href="/cv">CV</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link js-scroll-trigger" href="/portfolio">Portofólio</a>
+                            </li>
+                            <li class="nav-item">
+                                <!-- <a class="nav-link js-scroll-trigger" id="Sessao"></a> -->
+                                <a class="nav-link js-scroll-trigger" id="Sessao" href="/main">Terminar Sessão</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <section>
+            <div id="main1" class="container h-100">
+                 <div id="esc_template">
+                    <h2 id="escolher">Preencha o Short CV</h2>
+                </div>
+				<div class="row h-100">
+					<div class="col-lg-9 my-auto">
+						<div class="header-content mx-auto">
+							<form id="formNewCV">
+								<form class="form-inline">
+									<div class="form-group-profissao">
+										<label for="prof" class="control-label">Profissão:</label>
+										<select id="prof">
+											<option class="option" value="trolha">Trolha</option>
+											<option class="option" value="engenherio informatico">Engenherio Informático</option>
+											<option class="option" value="canalizador">Canalizador</option>
+											<option class="option" value="serralheiro">Serralheiro</option>
+											<option class="option" value="carpinteiro">Carpinteiro</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<label for="carta_conducao" class="control-label">Carta de condução:</label> <br>
+										<select id="carta_conducao" multiple>
+											<option value="nao_possui">Não possui</option>
+											<option value="AM">AM</option>
+											<option value="A1">A1</option>
+											<option value="A2">A2</option>
+											<option value="A">A</option>
+											<option value="B1">B1</option>
+											<option value="B">B</option>
+											<option value="C1">C1</option>
+											<option value="C">C</option>
+											<option value="D1">D1</option>
+											<option value="D">D</option>
+											<option value="BE">BE</option>
+											<option value="C1E">C1E</option>
+											<option value="D1E">D1E</option>
+											<option value="DE">DE</option>
+										</select>
+									</div>
+								</form>
+								<div class="form-group">
+									<label for="carreira_aca" class="control-label">Carreira Académica:</label>
+									<textarea type="text" class="form-control" id="carreira_aca" name="carreira_aca" rows="6" cols="50"></textarea>
+								</div>
+								<div class="form-group">
+									<label for="experiencia_pro" class="control-label">Experiência Profissional</label>
+									<textarea type="text" class="form-control" id="exper_pro" name="experiencia_pro" rows="6" cols="50"></textarea>
+								</div>
+								<div class="form-group">
+									<label for="capa" class="control-label">Capacidades:</label>
+									<textarea type="text" class="form-control" id="capa" name="capa" rows="6" cols="50"></textarea>
+								</div>
+								<div class="form-group">
+									<label for="obje" class="control-label">Objetivos:</label>
+									<textarea type="text" class="form-control" id="obje" name="obje" rows="6" cols="50"></textarea>
+								</div>
+								<div class="form-group">
+									<label for="informacao_adicional" class="control-label">Informação adicional:</label>
+									<textarea ype="text" class="form-control" id="info_adi" name="info_adi" rows="6" cols="50"></textarea>
+								</div>
+								<div class="form-group">
+									<label for="tit_proj1" class="control-label">Projetos Realizados:</label>
+									<input type="text" id="tit_proj1" placeholder="Titulo do Projeto">
+									<textarea type="text" class="form-control" id="proj_rea1" name="proj_rea1" rows="6" cols="50"></textarea>
+									<form action="/" ref='uploadForm' method="post" enctype="multipart/form-data">
+                                        <input type="file" id="file-to-upload" name="image">
+                                        <img id="blah1" scr="#" width="200" height="200" alt="your image"/>
+                                        <input type="text" value="Upload"> Upload File
+                                        <input id="img_upload1" type="submit" value="Upload">
+                                    </form>
+								</div>
+								<div class="form-group">
+									<label for="tit_proj2" class="control-label">Projetos Realizados:</label>
+									<input type="text" id="tit_proj2" placeholder="Titulo do Projeto">
+									<textarea type="text" class="form-control" id="proj_rea2" name="proj_rea2" rows="6" cols="50"></textarea>
+									
+									<form action="/file/upload" ref='uploadForm' id="uploadForm2" method="post" enctype="multipart/form-data">
+                                        <input type="file" id="imgInp2" name="image">
+                                        <img id="blah2" scr="#" alt="your image"/>
+                                        <input type="text" value="Upload"> Upload File
+                                        <input id="img_upload2" type="submit" value="Upload">
+                                    </form>
+								</div>
+								<div class="form-group">
+									<label for="tit_proj3" class="control-label">Projetos Realizados:</label>
+									<input type="text" id="tit_proj3" placeholder="Titulo do Projeto">
+									<textarea type="text" class="form-control" id="proj_rea3" name="proj_rea3" rows="6" cols="50"></textarea>
+									<form action="/file/upload" ref='uploadForm' id="uploadForm" method="post" enctype="multipart/form-data">
+                                        <input type="file" id="imgInp3" name="image">
+                                        <img id="blah3" scr="#" alt="your image"/>
+                                        <input type="text" value="Upload"> Upload File
+                                        <input id="img_upload3" type="submit" value="Upload">
+                                    </form>
+								</div>
+								<div class="form-group">
+									<input type="submit" name="guardar" id="gdPtShort" value="Guardar"/>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+            </div>
+            <div id="main2" class="container">
+                <div id="esc_template">
+                    <h2 id="escolher">Preencha o Full Portfólio</h2>
+                </div>
+                <div class="from-group" id="tpt">
+                    <label class="control-label">Tipo de preenchimento do Portfólio</label>
+                    <br><input type="radio" class="radioBtnClass" name="tipo" id="Persona" value="Personalizado"> Personalizado 
+                    <br><input type="radio" class="radioBtnClass" name="tipo" id="Liv" value="Livre"> Livre
+                </div>    
+                <div class="row h-100" id ="ptpersonalizado">
+                    <div class="col-lg-9 my-auto">
+                        <div class="header-content mx-auto">
+                            <form id="formPtPers">
+                                <div class="form-group">
+                                    <label for="cursos" class="control-label">Carreira Académica</label>
+                                    <!--<br><label for="n_lmd" class="control-label">Número de Licenciaturas/Mestrados/Doutoramentos:  </label>-->
+                                    <!--<input id="n_lmd" type="number" value="5">-->
+                                    <!--<br><div class="form-group">-->
+                                    <!--    <input id="num_cursos_button" type="submit" name="inserir1" value="Inserir"/>-->
+                                    <!--</div>-->
+                                    <br><table class="table" id="cursos">
+                                        <thead class="thead-dark">
+                                            <tr id="cabeça">
+                                                <th>Instituição de Ensino</th>
+                                                <th>Nome do Curso</th>
+                                                <th>Ano de Inicio</th>
+                                                <th>Ano de Fim</th>
+                                                <th>Nota Final</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td ><input id="ensi1" value="ESMAD"></td>
+                                                <td ><input id="curs1" value="TSIW"></td>
+                                                <td ><input id="aniens1" value="2010"></td>
+                                                <td ><input id="anfens1" value="2011"></td>
+                                                <td ><input id="notaf1" value="15"></td>
+                                            </tr>
+                                            <tr>
+                                                <td ><input id="ensi2" value="ESMAD"></td>
+                                                <td ><input id="curs2" value="TSIW"></td>
+                                                <td ><input id="aniens2" value="2010"></td>
+                                                <td ><input id="anfens2" value="2011"></td>
+                                                <td ><input id="notaf2" value="15"></td>
+                                            </tr>
+                                            <tr>
+                                                <td ><input id="ensi3" value="ESMAD"></td>
+                                                <td ><input id="curs3" value="TSIW"></td>
+                                                <td ><input id="aniens3" value="2010"></td>
+                                                <td ><input id="anfens3" value="2011"></td>
+                                                <td ><input id="notaf3" value="15"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <label class="control-label">* Comece o nome do curso pelo seu grau (Licenciatura, Mestrado, Doutoramento)</label>
+                                    <label class="control-label">Importar imagens que possam ser importantes</label><br>
+                                    <label for="maisInfoAcademica" class="control-label">Mais informações sobre a sua carreira académica</label>
+                                    <br><textarea value="NADA" type="text" class="form-control" id="maisInfoAcademica" name="maisInfoAcademica" rows="6" cols="50"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="empregos" class="control-label">Experiência Profissional</label>
+                                    <!--<br><label for="n_empregos" class="control-label">Número de Empregos</label>-->
+                                    <!--<input id="n_empregos" type="number" value="5">-->
+                                    <!--<div class="form-group">-->
+                                    <!--    <input id="num_empregos_button" type="submit" name="inserir2" value="Inserir"/>-->
+                                    <!--</div>-->
+                                    <br><table class="table" id="empregos">
+                                        <thead class="thead-dark">
+                                            <tr id="cabeça1">
+                                                <th>Empresa</th>
+                                                <th>Ano de Inicio</th>
+                                                <th>Ano de Fim</th>
+                                                <th>Profissão</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td ><input id="empr1" value="IOTECH"></td>
+                                                <td ><input id="aiempr1" value="2015"></td>
+                                                <td ><input id="afempr1" value="2016"></td>
+                                                <td ><input id="profi1" value="Programador"></td>
+                                            </tr>
+                                            <tr>
+                                                <td ><input id="empr2" value="IOTECH"></td>
+                                                <td ><input id="aiempr2" value="2015"></td>
+                                                <td ><input id="afempr2" value="2016"></td>
+                                                <td ><input id="profi2" value="Programador"></td>
+                                            </tr>
+                                            <tr>
+                                                <td ><input id="empr3" value="IOTECH"></td>
+                                                <td ><input id="aiempr3" value="2015"></td>
+                                                <td ><input id="afempr3" value="2016"></td>
+                                                <td ><input id="profi3" value="Programador"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <label class="control-label">Importar imagens que possam ser importantes</label><br>
+                                    <label for="maisInfoProfissional" class="control-label">Mais informações sobre a sua carreira profissional</label>
+                                    <br><textarea value="NADA" type="text" class="form-control" id="maisInfoProfissional" name="maisInfoProfissional" rows="6" cols="50"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label	class="control-label">Projetos Realizados</label>
+                                    <br><label for="projetosNPro" class="control-label">Projetos Não Profissionais Realizados:</label>
+                                    <!--<input id="n_projetos_npro" type="number" value="5">-->
+                                    <!--<div class="form-group">-->
+                                    <!--    <input id="num_projetos_npro_button" type="submit" name="inserir3" value="Inserir"/>-->
+                                    <!--</div>-->
+                                    <br><table class="table" id="projetosNPro">
+                                        <thead class="thead-dark">
+                                            <tr id="cabeça2">
+                                                <th>Nome do Projeto</th>
+                                                <th>Tema do Projeto</th>
+                                                <th>Ano de Inicio</th>
+                                                <th>Ano de Fim</th>
+                                                <th>URL</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td ><input id="nomnproj1" value="webCV"></td>
+                                                <td ><input id="temnproj1" value="CVs"></td>
+                                                <td ><input id="ainproj1" value="2017"></td>
+                                                <td ><input id="afnproj1" value="2017"></td>
+                                                <td ><input id="urlnproj1" value="UUU"></td>
+                                            </tr>
+                                            <tr>
+                                                <td ><input id="nomnproj2" value="webCV"></td>
+                                                <td ><input id="temnproj2" value="CVs"></td>
+                                                <td ><input id="ainproj2" value="2017"></td>
+                                                <td ><input id="afnproj2" value="2017"></td>
+                                                <td ><input id="urlnproj2" value="UUU"></td>
+                                            </tr>
+                                            <tr>
+                                                <td ><input id="nomnproj3" value="webCV"></td>
+                                                <td ><input id="temnproj3" value="CVs"></td>
+                                                <td ><input id="ainproj3" value="2017"></td>
+                                                <td ><input id="afnproj3" value="2017"></td>
+                                                <td ><input id="urlnproj3" value="UUU"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="form-group">
+                                    <br><label for="projetosPro" class="control-label">Projetos Profissionais Realizados:</label>
+                                    <!--<input id="n_projetos_pro" type="number" value="5">-->
+                                    <!--<div class="form-group">-->
+                                    <!--    <input id="num_projetos_pro_button" type="submit" name="inserir4" value="Inserir"/>-->
+                                    <!--</div>-->
+                                    <br><table class="table" id="projetosPro">
+                                        <thead class="thead-dark">
+                                            <tr id="cabeça3">
+                                                <th>Nome do Projeto</th>
+                                                <th>Tema do Projeto</th>
+                                                <th>Ano de Inicio</th>
+                                                <th>Ano de Fim</th>
+                                                <th>URL</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td ><input id="nomproj1" value="Faceboka"></td>
+                                                <td ><input id="temproj1" value="Redes Sociais"></td>
+                                                <td ><input id="aiproj1" value="2020"></td>
+                                                <td ><input id="afproj1" value="2021"></td>
+                                                <td ><input id="urlproj1" value="UUA"></td>
+                                            </tr>
+                                            <tr>
+                                                <td ><input id="nomproj2" value="Faceboka"></td>
+                                                <td ><input id="temproj2" value="Redes Sociais"></td>
+                                                <td ><input id="aiproj2" value="2020"></td>
+                                                <td ><input id="afproj2" value="2021"></td>
+                                                <td ><input id="urlproj2" value="UUA"></td>
+                                            </tr>
+                                            <tr>
+                                                <td ><input id="nomproj3" value="Faceboka"></td>
+                                                <td ><input id="temproj3" value="Redes Sociais"></td>
+                                                <td ><input id="aiproj3" value="2020"></td>
+                                                <td ><input id="afproj3" value="2021"></td>
+                                                <td ><input id="urlproj3" value="UUA"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="form-group">
+                                    <label for="capaPers" class="control-label">Capacidades</label>
+                                    <textarea value="Programar" type="text" class="form-control" id="capaPers" name="capaPers" name="skills" rows="6" cols="50"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="objesPers" class="control-label">Objetivos</label>
+                                    <textarea value="Viver" type="text" class="form-control" id="objesPers" name="objesPers" rows="6" cols="50"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="infoAdiPers" class="control-label">Informação adicional</label>
+                                    <textarea value="Vive em Vila das Aves" type="text" class="form-control" id="infoAdiPers" name="infoAdiPers" rows="6" cols="50"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <input id="vt" type="button" name="Voltar" value="Voltar">
+                                    <input id="gdPtFullPers" type="submit" name="guardarFullPers" value="Guardar">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="row h-100" id="cvlivre">
+					<div class="col-lg-9 my-auto">
+						<div class="header-content mx-auto">
+							<form id="formNewCV">
+								<div class="form-group">
+									<label for="carreiraAcaLivre" class="control-label">Carreira Académica:</label>
+									<textarea type="text" class="form-control" id="carreiraAcaLivre" name="carreiraAcaLivre" rows="6" cols="50"></textarea>
+								</div>
+								<div class="form-group">
+									<label for="expProfLivre" class="control-label">Experiência Profissional</label>
+									<textarea type="text" class="form-control" id="expProfLivre" name="expProfLivre" rows="6" cols="50"></textarea>
+								</div>
+								<div class="form-group">
+									<label for="projProReaLivre" class="control-label">Projetos Profissionais Realizados:</label>
+									<textarea type="text" class="form-control" id="projProReaLivre" name="projProReaLivre" rows="6" cols="50"></textarea>
+								</div>
+								<div class="form-group">
+									<label for="projNProReaLivre" class="control-label">Projetos Não Profissionais Realizados:</label>
+									<textarea type="text" class="form-control" id="projNProReaLivre" name="projNProReaLivre" rows="6" cols="50"></textarea>
+								</div>
+								<div class="form-group">
+									<label for="capaLiv" class="control-label">Capacidades:</label>
+									<textarea type="text" class="form-control" id="capaLiv" name="capaLiv" rows="6" cols="50"></textarea>
+								</div>
+								<div class="form-group">
+									<label for="objLivre" class="control-label">Objetivos:</label>
+									<textarea type="text" class="form-control" id="objLivre" name="objLivre" rows="6" cols="50"></textarea>
+								</div>
+								<div class="form-group">
+									<label for="infoAdiLiv" class="control-label">Informação adicional:</label>
+									<textarea type="text" class="form-control" id="infoAdiLiv" name="infoAdiLiv" rows="6" cols="50"></textarea>
+								</div>
+								<div class="form-group">
+								    <input id="vt1" type="button" name="Voltar" value="Voltar">
+									<input type="submit" name="gdPtFullLiv" id="gdPtFullLiv" value="Guardar"/>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+            </div>
+            <div id="main3" class="container">
+                <div id="esc_template">
+                    <h2 id="escolher">Escolha um Template</h2>
+                </div>
+                <section class="thumbnails">
+                    <div>
+                        <a href="../assets/images/thumbs/port1.jpg">
+                            <img src="../assets/images/thumbs/port1.jpg" alt="" />
+                        </a>
+                        <a href="../assets/images/thumbs/port2.jpg">
+                            <img src="../assets/images/thumbs/port2.jpg" alt="" />
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../assets/images/thumbs/port3.png">
+                            <img src="../assets/images/thumbs/port3.png" alt="" />
+                        </a>
+                        <a href="../assets/images/thumbs/port4.jpg">
+                            <img src="../assets/images/thumbs/port4.jpg" alt="" />
+                        </a>
+                        <a href="../assets/images/thumbs/port5.jpg">
+                            <img src="../assets/images/thumbs/port5.jpg" alt="" />
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../assets/images/thumbs/port6.png">
+                            <img src="../assets/images/thumbs/port6.png" alt="" />
+                        </a>
+                        <a href="../assets/images/thumbs/port7.jpg">
+                            <img src="../assets/images/thumbs/port7.jpg" alt="" />
+                        </a>
+                    </div>
+                </section>
+                <input id="vt1" type="button" name="Voltar1" value="Voltar"/>
+                <input id="gd2" type="button" name="Guardar2" value="Guardar" />
+            </div>
+        </section>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./controller/login.controller.js"></script>
+  </body>
+</html>

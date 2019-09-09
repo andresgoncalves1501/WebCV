@@ -1,0 +1,77 @@
+h2{	
+	padding-top: 35mm;
+	text-align: center;
+	color:black;
+	font-family: 'Didact Gothic', sans-serif;
+}
+#cabeçalho{
+	background-color: rgb(52, 100, 112, 0.8);}
+#cabeçalho img{
+	margin-top: 5mm;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	height: 40mm;
+	width: 40mm;
+	border-radius: 100%; }
+#cabeçalho h4{
+	margin-top: 5mm;
+	margin-bottom: 5mm;
+	color: white;
+	font-family: 'Didact Gothic', sans-serif;
+	text-align: center; }
+#cabeçalho h6{
+	margin-top: 10mm;
+	color: white;
+	font-family: 'Didact Gothic', sans-serif;
+	text-align: center; }
+#cabeçalho p{
+	color: white;
+	font-family: 'Didact Gothic', sans-serif;
+	text-align: center; }
+
+#body_page{
+	background-color: white; }
+#body_page h6{
+	margin-left: 10mm;
+	font: bold 'Didact Gothic', sans-serif;
+	color: black;
+}
+#body_page p{
+	margin-left: 10mm;
+	font: bold 'Didact Gothic', sans-serif;
+	color: black;
+}
+#body_page textarea{
+	margin-left: 10mm;
+	border-radius:4px; }
+#body_page table{
+	text-align: center}
+#body_page thead{
+	background-color: rgb(52, 100, 112, 0.8);
+	color:white;
+	font-family: 'Didact Gothic', sans-serif;}
+
+input[type=submit] {
+	margin-top: 10px;
+	margin-bottom: 30px;
+	text-align: center;
+	background-color: white;
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 16px;
+    height: 30px;
+    width: 100px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 4px; }
+input[type=button] {
+	margin-left: 250mm;
+	margin-top: 10px;
+	margin-bottom: 30px;
+	text-align: center;
+	background-color: white;
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 16px;
+    height: 30px;
+    width: 100px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 4px; }

@@ -1,0 +1,109 @@
+<html>
+
+<head>
+    <title>WebCV Registo</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="../style/registo.css" />
+</head>
+
+<body>
+    <div id="google_translate_element"></div><script type="text/javascript">
+            function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'pt', includedLanguages: 'en,pt', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+          }
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <form id="msform">
+        <ul id="progressbar">
+            <li class="active">Tipo de Conta</li>
+            <li>Configurações</li>
+            <li>Detalhes</li>
+        </ul>
+        <fieldset>
+            <h2 class="fs-title">Tipo de Conta</h2><br> Empresa
+            <input type="radio" name="account" value="company" id="company"> Individuo
+            <input type="radio" name="account" value="individual" id="individual">
+            <input type="button" name="next" class="next action-button" value="Next">
+        </fieldset>
+        <fieldset>
+            <h2 class="fs-title">Configurações</h2>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+            <input type="password" class="form-control" id="rep_password" name="rep_password" data-match="#password" data-match-error="Whoops, these don't match" placeholder="Confirm password" required>
+            <input type="button" name="previous" class="previous action-button" value="Anterior">
+            <input type="button" name="next" class="next action-button" value="Próximo">
+        </fieldset>
+        <fieldset>
+            <h2 class="fs-title">Detalhes</h2>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Nome" required>
+            <label for="bday" id="df">Date de Fundação</label>
+            <label for="bday" id="dn">Date de Nascimento</label>
+            <input type="date" name="bday" id="bday">
+            <input type="text" class="form-control" id="address" name="address" placeholder="Morada" required>
+            <input type="text" class="form-control" id="observations" name="observations" placeholder="Observações">
+            <input type="button" name="previous" class="previous action-button" value="Anterior" />
+            <input id="createbutton" type="submit" name="submit" class="submit action-button" value="Submeter" />
+        </fieldset>
+    </form>
+    <div id="result"> </div>
+    <script>
+        //jQuery time
+        var current_fs, next_fs, previous_fs; //fieldsets
+
+        $(document).ready(function() {
+
+            $(".next").click(function() {
+                //if(animating) return false;
+                //animating = true;
+
+                current_fs = $(this).parent(); // atual fieldset
+                next_fs = $(this).parent().next(); //proximo fieldset
+
+                //activate next step on progressbar using the index of next_fs
+                $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active"); //poe a class active no a seguir
+
+                //show the next fieldset
+                next_fs.show();
+                current_fs.hide();
+            });
+
+            $(".previous").click(function() {
+                //if(animating) return false;
+                //animating = true;
+
+                current_fs = $(this).parent();
+                previous_fs = $(this).parent().prev();
+
+                //de-activate current step on progressbar
+                $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+
+                //show the previous fieldset
+                previous_fs.show();
+                current_fs.hide();
+            });
+            $('#df').hide()
+            $('#dn').hide()
+            $('input[type=radio][name=account]').change(function() {
+                if (this.value == 'Individuo') {
+                    console.log("lol")
+                    $('#df').show()
+                    $('#dn').hide()
+                }
+                else if (this.value == 'Empresa') {
+                    console.log("lolitos")
+                    $('#df').show()
+                    $('#dn').hide()
+                }
+            });
+        });
+    </script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.10.2/validator.min.js"></script>
+    <script type="text/javascript" src="./controller/registo.controller.js"></script>
+</body>
+
+</html>

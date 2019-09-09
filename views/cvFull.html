@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>WebCV Full CV</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="../style/cvFull.css" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <script>
+    function allowDrop(ev) {
+      ev.preventDefault();
+    }
+
+    function drag(ev) {
+      ev.dataTransfer.setData("text", ev.target.id);
+    }
+
+    function drop(ev) {
+      ev.preventDefault();
+      var data = ev.dataTransfer.getData("text");
+      ev.target.appendChild(document.getElementById(data));
+    }
+  </script>
+</head>
+
+<body>
+  <div id="google_translate_element"></div><script type="text/javascript">
+            function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'pt', includedLanguages: 'en,pt', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+          }
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <div class="form-group">
+    <div class="row" id="cabeçalho">
+      <div class="col-3"></div>
+      <div class="col-2">
+        <img id="imgCab" src="../img/user.png">
+        <h4 id="nome"></h4>
+      </div>
+      <div class="col-4">
+        <h6>Data de Nascimento</h6>
+        <p id="data_nascimento"></p>
+        <!--<h6>Morada</h6>-->
+        <!--<p>Avenida José Dias de Oliveira, n.º 7, Famalicão</p>-->
+        <h6>Contacto</h6>
+        <p id="email"></p>
+      </div>
+      <div class="col-3"></div>
+    </div>
+  </div>
+  <div class="form-group" id="body_page">
+    <div class="row" id="bodyCVLivre">
+      <div class="col-2"></div>
+      <div class="col-8">
+        <br>
+        <br>
+        <div id="1aves" ondrop="drop(event)" ondragover="allowDrop(event)" style="border-style: solid; border-color: grey">
+          <div id="aves1" draggable="true" ondragstart="drag(event)">
+            <h6>Carta de Condução:</h6>
+            <p id="ccBodyCVLivre"></p>
+          </div>
+        </div>
+        <br>
+        <div id="2aves" ondrop="drop(event)" ondragover="allowDrop(event)" style="border-style: solid; border-color: grey">
+          <div id="aves2" draggable="true" ondragstart="drag(event)">
+            <h6>Profissão:</h6>
+            <p id="profBodyCVLivre"></p>
+          </div>
+        </div>
+        <br>
+        <div id="3aves" ondrop="drop(event)" ondragover="allowDrop(event)" style="border-style: solid; border-color: grey">
+          <div id="aves3" draggable="true" ondragstart="drag(event)">
+            <h6>Carreira Académica:</h6>
+            <p id="caBodyCVLivre"></p>
+          </div>
+        </div>
+        <br>
+        <div id="4aves" ondrop="drop(event)" ondragover="allowDrop(event)" style="border-style: solid; border-color: grey">
+          <div id="aves4" draggable="true" ondragstart="drag(event)">
+            <h6>Experiência Profissional:</h6>
+            <p id="epBodyCVLivre"></p>
+          </div>
+        </div>
+        <br>
+        <div id="5aves" ondrop="drop(event)" ondragover="allowDrop(event)" style="border-style: solid; border-color: grey">
+          <div id="aves5" draggable="true" ondragstart="drag(event)">
+            <h6>Projetos Não Profissionais:</h6>
+            <p id="prNBodyCVLivre"></p>
+          </div>
+        </div>
+        <br>
+        <div id="6aves" ondrop="drop(event)" ondragover="allowDrop(event)" style="border-style: solid; border-color: grey">
+          <div id="aves6" draggable="true" ondragstart="drag(event)">
+            <h6>Projetos Profissionais:</h6>
+            <p id="prBodyCVLivre"></p>
+          </div>
+        </div>
+        <br>
+        <div id="7aves" ondrop="drop(event)" ondragover="allowDrop(event)" style="border-style: solid; border-color: grey">
+          <div id="aves7" draggable="true" ondragstart="drag(event)">
+            <h6>Capacidades:</h6>
+            <p id="capBodyCVLivre"></p>
+          </div>
+        </div>
+        <br>
+        <div id="8aves" ondrop="drop(event)" ondragover="allowDrop(event)" style="border-style: solid; border-color: grey">
+          <div id="aves8" draggable="true" ondragstart="drag(event)">
+            <h6>Objetivos:</h6>
+            <p id="objBodyCVLivre"></p>
+          </div>
+        </div>
+        <br>
+        <div id="9aves" ondrop="drop(event)" ondragover="allowDrop(event)" style="border-style: solid; border-color: grey">
+          <div id="aves9" draggable="true" ondragstart="drag(event)">
+            <h6>Informação Adicional:</h6>
+            <p id="iaBodyCVLivre"></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-2"></div>
+    </div>
+    <div class="row" id="bodyCVPers">
+      <div class="col-2"></div>
+      <div class="col-8">
+        <br>
+        <br>
+        <div id="10aves" ondrop="drop(event)" ondragover="allowDrop(event)" style="border-style: solid; border-color: grey">
+          <div id="aves10" draggable="true" ondragstart="drag(event)">
+            <h6>Carta de Condução:</h6>
+            <p id="ccBodyCVPers"></p>
+          </div>
+        </div>
+        <br>
+        <div id="11aves" ondrop="drop(event)" ondragover="allowDrop(event)" style="border-style: solid; border-color: grey">
+          <div id="aves11" draggable="true" ondragstart="drag(event)">
+            <h6>Profissão:</h6>
+            <p id="profBodyCVPers"></p>
+          </div>
+        </div>
+        <br>
+        <div id="12aves" ondrop="drop(event)" ondragover="allowDrop(event)" style="border-style: solid; border-color: grey">
+          <div id="aves12" draggable="true" ondragstart="drag(event)">
+            <h6>Carreira Académica:</h6>
+            <br>
+            <table id="caBodyCVPers" class="table">
+              <thead id="head1">
+                <tr>
+                  <th>Instituição de Ensino</th>
+                  <th>Curso</th>
+                  <th>Ano de Inicio</th>
+                  <th>Ano de Fim</th>
+                  <th>Nota Final</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td id="ens1t"></td>
+                  <td id="cur1t"></td>
+                  <td id="aiens1t"></td>
+                  <td id="afens1t"></td>
+                  <td id="notf1t"></td>
+                </tr>
+                <tr>
+                  <td id="ens2t"></td>
+                  <td id="cur2t"></td>
+                  <td id="aiens2t"></td>
+                  <td id="afens2t"></td>
+                  <td id="notf2t"></td>
+                </tr>
+                <tr>
+                  <td id="ens3t"></td>
+                  <td id="cur3t"></td>
+                  <td id="aiens3t"></td>
+                  <td id="afens3t"></td>
+                  <td id="notf3t"></td>
+                </tr>
+              </tbody>
+            </table><br>
+            <label for="caBodyCVPers1" class="control-label">Mais informações sobre a sua carreira académica</label>
+            <br>
+            <p id="caBodyCVPers1"></p>
+          </div>
+        </div>
+        <br>
+        <div id="13aves" ondrop="drop(event)" ondragover="allowDrop(event)" style="border-style: solid; border-color: grey">
+          <div id="aves13" draggable="true" ondragstart="drag(event)">
+            <h6>Experiência Profissional:</h6>
+            <br>
+            <table id="epBodyCVPers" class="table">
+              <thead id="head2">
+                <tr>
+                  <th>Empresa</th>
+                  <th>Ano de Inicio</th>
+                  <th>Ano de Fim</th>
+                  <th>Profissão</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td id="emp1t"></td>
+                  <td id="aiemp1t"></td>
+                  <td id="afemp1t"></td>
+                  <td id="prof1t"></td>
+                </tr>
+                <tr>
+                  <td id="emp2t"></td>
+                  <td id="aiemp2t"></td>
+                  <td id="afemp2t"></td>
+                  <td id="prof2t"></td>
+                </tr>
+                <tr>
+                  <td id="emp3t"></td>
+                  <td id="aiemp3t"></td>
+                  <td id="afemp3t"></td>
+                  <td id="prof3t"></td>
+                </tr>
+              </tbody>
+            </table><br>
+            <label for="epBodyCVPers1" class="control-label">Mais informações sobre a sua carreira profissional</label>
+            <br>
+            <p id="epBodyCVPers1"></p>
+          </div>
+        </div>
+        <br>
+        <div id="14aves" ondrop="drop(event)" ondragover="allowDrop(event)" style="border-style: solid; border-color: grey">
+          <div id="aves14" draggable="true" ondragstart="drag(event)">
+            <h6>Projetos Realizados:</h6>
+            <p>Projetos Não Profissionais</p>
+            <br>
+            <table id="pnpBodyCVPers" class="table">
+              <thead id="head3">
+                <tr>
+                  <th>Nome Do Projeto</th>
+                  <th>Tema Do Projeto</th>
+                  <th>Ano de Inicio</th>
+                  <th>Ano de Fim</th>
+                  <th>URL</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td id="nomnpro1t"></td>
+                  <td id="temnpro1t"></td>
+                  <td id="ainpro1t"></td>
+                  <td id="afnpro1t"></td>
+                  <th id="urlnpro1t"></th>
+                </tr>
+                <tr>
+                  <td id="nomnpro2t"></td>
+                  <td id="temnpro2t"></td>
+                  <td id="ainpro2t"></td>
+                  <td id="afnpro2t"></td>
+                  <th id="urlnpro2t"></th>
+                </tr>
+                <tr>
+                  <td id="nomnpro3t"></td>
+                  <td id="temnpro3t"></td>
+                  <td id="ainpro3t"></td>
+                  <td id="afnpro3t"></td>
+                  <th id="urlnpro3t"></th>
+                </tr>
+              </tbody>
+            </table><br>
+            <p>Projetos Profissionais</p>
+            <br>
+            <table id="ppBodyCVPers" class="table">
+              <thead id="head4">
+                <tr>
+                  <th>Nome Do Projeto</th>
+                  <th>Tema Do Projeto</th>
+                  <th>Ano de Inicio</th>
+                  <th>Ano de Fim</th>
+                  <th>URL</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td id="nompro1t"></td>
+                  <td id="tempro1t"></td>
+                  <td id="aipro1t"></td>
+                  <td id="afpro1t"></td>
+                  <td id="urlpro1t"></td>
+                </tr>
+                <tr>
+                  <td id="nompro2t"></td>
+                  <td id="tempro2t"></td>
+                  <td id="aipro2t"></td>
+                  <td id="afpro2t"></td>
+                  <td id="urlpro2t"></td>
+                </tr>
+                <tr>
+                  <td id="nompro3t"></td>
+                  <td id="tempro3t"></td>
+                  <td id="aipro3t"></td>
+                  <td id="afpro3t"></td>
+                  <td id="urlpro3t"></td>
+                </tr>
+              </tbody>
+            </table><br>
+          </div>
+        </div>
+        <div id="15aves" ondrop="drop(event)" ondragover="allowDrop(event)" style="border-style: solid; border-color: grey">
+          <div id="aves15" draggable="true" ondragstart="drag(event)">
+            <h6>Capacidades:</h6>
+            <p id="capBodyCVPers"></p>
+          </div>
+        </div>
+        <br>
+        <div id="16aves" ondrop="drop(event)" ondragover="allowDrop(event)" style="border-style: solid; border-color: grey">
+          <div id="aves16" draggable="true" ondragstart="drag(event)">
+            <h6>Objetivos:</h6>
+            <p id="objBodyCVPers"></p>
+          </div>
+        </div>
+        <br>
+        <div id="17aves" ondrop="drop(event)" ondragover="allowDrop(event)" style="border-style: solid; border-color: grey">
+          <div id="aves17" draggable="true" ondragstart="drag(event)">
+            <h6>Informação Adicional:</h6>
+            <p id="iaBodyCVPers"></p>
+          </div>
+        </div>
+        <br>
+      </div>
+      <div class="col-2"></div>
+    </div>
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.10.2/validator.min.js"></script>
+  <script type="text/javascript" src="../controller/carregarTemplateFull.controller.js"></script>
+
+  // <script>
+  //   $(function() {
+  //     var sPositions = localStorage.positions || "{}",
+  //       positions = JSON.parse(sPositions);
+  //     $.each(positions, function(id, pos) {
+  //       $("#" + id).css(pos)
+  //     })
+  //     $("#aves1").draggable({
+  //       containment: "#containment-wrapper",
+  //       scroll: false,
+  //       stop: function(event, ui) {
+  //         positions[this.id] = ui.position
+  //         localStorage.positions = JSON.stringify(positions)
+  //       }
+  //     });
+
+  //     $("#aves2").draggable({
+  //       containment: "#containment-wrapper",
+  //       scroll: false,
+  //       stop: function(event, ui) {
+  //         positions[this.id] = ui.position
+  //         localStorage.positions = JSON.stringify(positions)
+  //       }
+  //     });
+
+  //     $("#aves3").draggable({
+  //       containment: "#containment-wrapper",
+  //       scroll: false,
+  //       stop: function(event, ui) {
+  //         positions[this.id] = ui.position
+  //         localStorage.positions = JSON.stringify(positions)
+  //       }
+  //     });
+  //   });
+  // </script>
+</body>
+
+</html>

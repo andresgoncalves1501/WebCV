@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>WebCV Homepage</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+          
+      function initMap() {
+        var iotech = { lat: 41.4269026, lng: -8.4368947 };
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: iotech
+        });
+        var marker = new google.maps.Marker({
+          position: iotech,
+          map: map
+        });
+      }
+      
+      $(document).ready(function() {
+        $('#local').hide()
+        $('#demail').show()
+        $('#social').hide()
+        $('#iemail').click(function(){
+          $('#local').hide()
+          $('#demail').show()
+          $('#social').hide()
+        });
+        $('#ilocal').click(function(){
+          $('#demail').hide()
+          $('#local').show()
+          $('#social').hide()
+        });
+        $('#isocial').click(function(){
+          $('#local').hide()
+          $('#demail').hide()
+          $('#social').show()
+        });       
+      });
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container">
+            <form class="form-inline">
+                <a href="#header">
+                    <img src="../img/WebCV_Logo_2.png" class="navbar-brand js-scroll-trigger">
+                </a>
+                <p name="bem-vindo"></p>
+            </form>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+            <div id="google_translate_element"></div><script type="text/javascript">
+            function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'pt', includedLanguages: 'en,pt', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+          }
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#conceito">Conceito</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#contacto">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <!-- <a class="nav-link js-scroll-trigger" id="Sessao"></a> -->
+                        <a class="nav-link js-scroll-trigger" id="Sessao" href="/login">Iniciar Sessão</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="masthead" id="header">
+    </header>
+    <section id="conceito">
+        <div class="container">
+          <div class="row" id="textinho">
+            <div class="col-md-2"></div>
+            <div class="col-md-8 mx-auto">
+              <h1 class="section-heading">Conceito</h1>
+              <p>Este website foi desenhado e desenvolvido por estudantes da licenciatura em Tecnologias e Sistemas de Informação para a Web (TSIW),
+              que é lecionada numa escola em Vila do Conde, Portugal, designada por Escola Superior de Media Artes e Design (ESMAD).
+              Este projeto foi proposto por um empresa chamada IOTECH, que incentivou os estudantes a usar as capacidades
+              adquiridas em várias cadeiras em prol deste trabalho.</p>
+              <p>WebCV é uma plataforma Web que propociona às pessoas uma forma fácil de criar o seu CV ou portfólio, especialmente para quem se 
+              formou recentemente e tem dificuldades em criar o seu próprio curriculum. Com este website as pessoas conseguem criar o seu CV ou 
+              portfólio seguindo apenas os passos que lhe são fornecidos, havendo ainda a possibilidade de imprimir em formato PDF ou partilhar nas
+              redes sociais. Os currículos estão ainda visiveis para empresas que poderão criar a sua conta e visitar os perfis dos utilizadores em busca 
+              de potenciais funcionários.</p>
+            </div>
+            <div class="col-md-2"></div>
+          </div>
+          <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-2 mx-auto">
+              <img src="../img/pes1.jpg">
+              <h6 id="violas">Luis Violas</h6>
+            </div>
+            <div class="col-md-2 mx-auto">
+              <img src="../img/pes2.jpg">
+              <h6 id="joao">João Martins</h6>
+            </div>
+            <div class="col-md-2 mx-auto">
+              <img src="../img/pes3.jpg">
+              <h6 id="andre">André Gonçalves</h6>
+            </div>
+            <div class="col-md-2"></div>
+          </div>
+      </section>
+      <section class="contacto text-center" id="contacto">
+        <div class="container">
+          <h1 class="section-heading">Contacto</h1>
+          <div class="row">
+            <div class="col-4">
+              <a href="#email" id="iemail">
+                <img src="../img/email.png">
+                <h6>E-Mail</h6>
+              </a>
+            </div>
+            <div class="col-4">
+              <a href="#local" id="ilocal">
+                <img src="../img/local.png">
+                <h6>Localização</h6>
+              </a>
+            </div>
+            <div class="col-4">
+              <a href="#social" id="isocial">
+                <img src="../img/social network.png">
+                <h6>Redes Sociais</h6>
+              </a>
+            </div>
+          </div>
+          <div id="demail">
+            <form id="formMail" role="form" data-toggle="validator" autocomplete="off" novalidate="true">
+              <div class="form-group scroll-animated-from-bottom">
+                <input type="email" id="email" name="email" placeholder="Email"><br>
+                <input type="text" id="assunto" name="assunto" placeholder="Assunto"><br>
+                <textarea name="mensagem" id="texto" name="texto" placeholder="Mensagem"></textarea><br>
+                <input type="submit" name="enviar" value="Enviar" />
+              </div>
+            </form> 
+          </div>
+          <div id="local">
+            <div class="map-wrapper" id="map"></div>
+              <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1txX6mVZR67YCnnga1pmYjiMDOdCquc0&callback=initMap">
+              </script>
+            </div>
+          </div>
+          <div id="social">
+            <div class="row">
+              <div class="col-3"></div>
+              <div class="col-6">
+                <a href="https://www.facebook.com/iotechpis">
+                  <img src="../img/fb.png">
+                </a>
+                <a href="https://plus.google.com/102393959665543059234">
+                  <img src="../img/g+.png">
+                </a>
+                <a href="https://twitter.com/iotechpis">
+                  <img src="../img/tw.png">
+                </a>
+              </div>
+              <div class="col-3"></div>
+            </div>
+            <div class="row">
+              <div class="col-3"></div>
+              <div class="col-6">
+                <a href="https://www.linkedin.com/company/iotechpt/">
+                  <img src="../img/ln.png">
+                </a>
+                <a href="https://www.pinterest.pt/iotechpis/">
+                  <img src="../img/pin.png">
+                </a>
+                <a href="https://www.youtube.com/channel/UCPBz6T3dt5EPfqEl0b9IB5w">
+                  <img src="../img/yt.png">
+                </a>
+              </div>
+              <div class="col-3"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.10.2/validator.min.js"></script>
+    <script type="text/javascript" src="./controller/main.controller.js"></script>
+  </body>
+</html>

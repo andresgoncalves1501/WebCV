@@ -1,0 +1,111 @@
+#mainNav {
+	background-color: rgba(0, 0, 0, 0.2);
+	-webkit-transition: all .35s;
+	-moz-transition: all .35s;
+	transition: all .35s;
+	font-family: 'Didact Gothic', sans-serif;
+	font-weight: 200;
+	letter-spacing: 1px;
+	align-content: center; }
+#mainNav form {
+	margin: 5px 0 5px 0; }
+#mainNav form p{
+	font-size: 12px;
+    text-align: left;
+    margin: 10px 0 0 0;
+    color:rgba(255, 255, 255, 0.65); }
+#mainNav .navbar-nav > li > a {
+	color: #ffffff;
+	font-size: 16px;
+	font-family: 'Didact Gothic', sans-serif;
+	margin: 5px 0 5px 0; }
+#mainNav .navbar-nav > li > a.active {
+	color: #ffffff; }
+#mainNav .navbar-nav > li > a.active:hover {
+	font-style: bold }
+@media (min-width: 992px) {
+	#mainNav .navbar-brand:hover, #mainNav .navbar-brand:focus {
+		font-style: bold; }
+	#mainNav .navbar-nav > li > a,
+	#mainNav .navbar-nav > li > a:focus {
+		font-style: bold }
+	#mainNav .navbar-nav > li > a:hover,
+	#mainNav .navbar-nav > li > a:focus:hover {
+		font-style: bold; } }
+
+h2{	
+	padding-top: 35mm;
+	text-align: center;
+	color:black;
+	font-family: 'Didact Gothic', sans-serif;
+}
+
+.model-content{
+	margin-top: 15mm;
+	margin-left: auto;
+	margin-right: auto;
+	width: 21cm; 
+	height: 29.7cm; }
+.model-content #cabecalho{
+	background-color: rgb(52, 100, 112, 0.6);}
+.model-content #cabecalho img{
+	margin-top: 5mm;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	height: 40mm;
+	width: 40mm;
+	border-radius: 100%; }
+.model-content #cabecalho h4{
+	margin-top: 5mm;
+	margin-bottom: 5mm;
+	color: white;
+	font-family: 'Didact Gothic', sans-serif;
+	text-align: center; }
+.model-content #cabecalho h6{
+	margin-top: 5mm;
+	color: white;
+	font-family: 'Didact Gothic', sans-serif;
+	text-align: center; }
+.model-content #cabecalho p{
+	color: white;
+	font-family: 'Didact Gothic', sans-serif;
+	text-align: center; }
+
+.model-content #body_page{
+	background-color: white; }
+.model-content #body_page h6{
+	margin-left: 5mm;
+	font: bold 'Didact Gothic', sans-serif;
+	color: black; }
+.model-content #body_page p{
+	margin-left: 5mm;
+	font: bold 'Didact Gothic', sans-serif;
+	color: black; }
+.model-content #body_page textarea{
+	margin-left: 5mm;
+	border-radius:4px; }
+
+input[type=submit] {
+	margin-top: 10px;
+	margin-bottom: 30px;
+	text-align: center;
+	background-color: white;
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 16px;
+    height: 30px;
+    width: 100px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 4px; }
+input[type=button] {
+	margin-left: 250mm;
+	margin-top: 10px;
+	margin-bottom: 30px;
+	text-align: center;
+	background-color: white;
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 16px;
+    height: 30px;
+    width: 100px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 4px; }
